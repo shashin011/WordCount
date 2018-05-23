@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count Results - Word Count App</title>
+</head>
+<body>
+    <h1 align="center">COUNT RESULTS</h1>
+    <a href="{% url 'home' %}">Start Over!</a>
+    <h2>Your Text:</h2>{{ fulltext }}
+    <p>There are <b>{{ count }}</b> words in your text</p>
+    <p><h2>Word Count:</h2>
+        {% for word, counttotal in sortedwords %}
+        <b>{{ word }}</b>: {{ counttotal }}
+        <br/>
+        {% endfor %}
+    </p>
+</body>
+</html>
